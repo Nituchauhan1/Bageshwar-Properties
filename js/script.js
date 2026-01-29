@@ -74,3 +74,25 @@ Requirement: ${req}`;
         "_blank"
     );
 }
+
+fetch("data/properties.json")
+    .then(res => res.json())
+    .then(data => {
+        const grid = document.querySelector(".property-grid");
+        if (!grid) return;
+
+        grid.innerHTML = "";
+
+        data.forEach(p => {
+            grid.innerHTML += `
+            <div class="property-card">
+                <img src="${p.image}">
+                <h3>${p.title}</h3>
+                <p>📍 ${p.location}</p>
+                <p>💰 ${p.price}</p>
+                <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Interested in ${p.title} at ${p.location}">
+                    Enquire on WhatsApp
+                </a>
+            </div>`;
+        });
+    });
