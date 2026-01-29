@@ -66,3 +66,39 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
+/* Sticky Header */
+header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* Active Menu */
+nav a.active {
+    border-bottom: 2px solid #ff9800;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Page Load Animation */
+body {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+body.loaded {
+    opacity: 1;
+}
