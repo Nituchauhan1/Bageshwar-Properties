@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Sticky Header (safe)
+    const header = document.querySelector("header");
+    if (header) {
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("sticky", window.scrollY > 50);
+        });
+    }
+
+    // Page Load Animation
+    document.body.classList.add("loaded");
+});
 // ===============================
 // 1. Sticky Header on Scroll
 // ===============================
