@@ -96,3 +96,12 @@ fetch("data/properties.json")
             </div>`;
         });
     });
+
+let slides = document.querySelectorAll(".slider img");
+let index = 0;
+
+setInterval(() => {
+    slides.forEach(img => img.classList.remove("active"));
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
