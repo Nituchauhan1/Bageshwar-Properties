@@ -175,3 +175,19 @@ body {
 .slider img.active {
     display: block;
 }
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #ff9800;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
