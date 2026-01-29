@@ -57,3 +57,20 @@ const ctaButtons = document.querySelectorAll(".btn");
 ctaButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         alert("Thanks for your interest!
+function sendLead(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const req = document.getElementById("requirement").value;
+
+    const message = `New Lead from Website:
+Name: ${name}
+Phone: ${phone}
+Requirement: ${req}`;
+
+    window.open(
+        `https://wa.me/919981945280?text=${encodeURIComponent(message)}`,
+        "_blank"
+    );
+}
